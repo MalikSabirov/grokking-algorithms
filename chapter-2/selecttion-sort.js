@@ -1,4 +1,4 @@
-const findSmallest = (array) => {
+const findSmallestIndex = (array) => {
   let smallestElement = array[0];
   let smallestIndex = 0;
 
@@ -17,7 +17,7 @@ const selectionSort = (array) => {
   const copyArray = [...array];
 
   for (let i = 0; i < array.length; i++) {
-    const smallestIndex = findSmallest(copyArray);
+    const smallestIndex = findSmallestIndex(copyArray);
 
     // remove smallestElement from initial array
     const [smallestItem] = copyArray.splice(smallestIndex, 1);
@@ -28,4 +28,4 @@ const selectionSort = (array) => {
   return sortedArray;
 };
 
-console.log("Selection sort: ", selectionSort([5, 3, 6, 2, 10]));
+console.log("Selection sort: ", selectionSort([5, 3, 6, 13, 15, 2, 10]));
